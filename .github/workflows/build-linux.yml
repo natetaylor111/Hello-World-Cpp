@@ -7,8 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.0.0
+        uses: actions/checkout@v4
 
       - name: Build project
         run: g++ main.cpp
+
+      - name: Archive binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: a.out
+          path: a.out
+          retention-days: 1
 
