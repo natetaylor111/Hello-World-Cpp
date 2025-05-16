@@ -1,9 +1,9 @@
 name: Build Linux
 
-on: workflow_dispatch
+on: [workflow_dispatch]
 
 jobs:
-  ubuntu-build
+  ubuntu-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -12,4 +12,3 @@ jobs:
       - name: Build project
         run: g++ main.cpp
 
-        
