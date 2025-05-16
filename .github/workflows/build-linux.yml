@@ -3,10 +3,13 @@ name: Build Linux
 on: workflow_dispatch
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2.0.0
+  ubuntu-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
 
-    - name: Build project
-      run: g++ main.cpp
+      - name: Build project
+        run: g++ main.cpp
+
+        
